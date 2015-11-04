@@ -1,5 +1,5 @@
-﻿var goodAnswer = 0;
-var scopeTimer;
+﻿var scopeTimer;
+var goodAnswer = document.getElementById("yes-drop").textContent;
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -29,7 +29,7 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(chosenMinutes, display);
     setInterval(function () {
-        var scopeTimerShow = document.getElementById("scopeTimer");
+        var scopeTimerShow = document.querySelector('#scopeTimer');
         scopeTimerShow.innerHTML = scopeTimer;
     }, 1000);
 };
@@ -96,24 +96,32 @@ interact('.dropzone').dropzone({
         var draggableElement = event.relatedTarget,
             dropzoneElement = event.target;
 
+        var elem = document.createElement("img");
         // feedback the possibility of a drop
         dropzoneElement.classList.add('drop-target');
         draggableElement.classList.add('can-drop');
         if (draggableElement.id == "yes-drop" && scopeTimer > 0) {
-            draggableElement.textContent = 'Dragged in';
+            draggableElement.textContent = 'Bonne réponse ';
+            var elem = document.createElement("img");
+            elem.setAttribute("src", "/Medias/Images/emoticon85.png");
+            draggableElement.appendChild(elem);
         } else if (draggableElement.id == "no-drop") {
             draggableElement.style.background = "#ff0000";
             draggableElement.textContent = 'Désole tu t\'es trompé';
         } else if (draggableElement.id = "yes-drop" && scopeTimer == 0) {
             draggableElement.style.background = "#ff0000";
-            draggableElement.textContent = 'Désole c\'est trop tard';
+            draggableElement.textContent = 'Bonne réponse. Trop tard ';
+            elem.setAttribute("src", "/Medias/Images/sad35.png");
+            draggableElement.appendChild(elem);
+            alert("yes");
         }
     },
     ondragleave: function (event) {
         // remove the drop feedback style
         event.target.classList.remove('drop-target');
         event.relatedTarget.classList.remove('can-drop');
-        event.relatedTarget.textContent = 'Dragged out';
+        //event.relatedTarget.textContent = 'Dragged out';
+        event.relatedTarget.textContent = goodAnswer;
     },
     ondrop: function (event) {
         var draggableElement = event.relatedTarget,
