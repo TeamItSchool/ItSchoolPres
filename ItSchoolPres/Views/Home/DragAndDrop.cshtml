@@ -3,11 +3,18 @@
     ViewBag.Title = "DragAndDrop";
 }
 
-<h2>DragAndDrop</h2>
-<p><div class="draggable"></div></p>
-<p></p>
+<center><div>Le jeu se termine dans <span id="time">01:00</span> minutes!</div></center>
+<br />
+<center><div>ScopeTimer <span id="scopeTimer"></span> swag!</div></center>
+
+<div id="no-drop" class="draggable drag-drop"> #no-drop </div>
+
+<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+
+<div id="inner-dropzone" class="dropzone">Résultat</div>
+
 
 @section Scripts {
-    <script src="~/Scripts/DraggleTest.js"></script>
-    <script src="~/Scripts/draggabilly.pkgd.js"></script>
+    <script src="~/Scripts/DragAndDrop/interact.min.js"></script>
+    <script src="~/Scripts/DragAndDrop/DragAndDropTest.js"></script>
 }
