@@ -3,18 +3,28 @@
     ViewBag.Title = "DragAndDrop";
 }
 
-<center><div>Le jeu se termine dans <span id="time">01:00</span> minutes!</div></center>
-<center><div>ScopeTimer <span id="scopeTimer"></span> swag!</div></center>
+<center><div><h2>Le jeu se termine dans <span id="time">01:00</span> minutes!</h2></div></center>
+<center><div id="goodCount"><h3></h3></div></center>
 <br />
-<center><h2>Qui est le président de la République Française ?</h2></center>
+<div><center><h2 id="question"></h2></center></div>
+<br /><br />
+<!--Remove the below comments if you want to drop-->
+<!-- 
+    <div id="badanswer1" class="draggable drag-drop"></div>
+    <div id="goodanswer" class="draggable drag-drop"></div>
+    <div id="badanswer2" class="draggable drag-drop"></div>
+    <div id="badanswer3" class="draggable drag-drop"></div>
+-->
 
-<div id="no-drop" class="draggable drag-drop">Barak Obama</div>
-<div id="yes-drop" class="draggable drag-drop">François Hollande</div>
-<div id="no-drop" class="draggable drag-drop">Angela Merkel</div>
-<div id="no-drop" class="draggable drag-drop">Justin Bieber</div>
+<!--Elements will come back automaticly to the "center" element. More cool for demo-->
+<center>
+    <div id="badanswer1" class="draggable drag-drop"></div>
+    <div id="goodanswer" class="draggable drag-drop"></div>
+    <div id="badanswer2" class="draggable drag-drop"></div>
+    <div id="badanswer3" class="draggable drag-drop"></div>
+</center>
 
-
-<div id="inner-dropzone" class="dropzone">Résultat</div>
+<div id="inner-dropzone" class="dropzone"><center>Résultat</center></div>
 
 
 @section Scripts {
