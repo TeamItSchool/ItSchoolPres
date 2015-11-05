@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItSchoolPres", "ItSchoolPres\ItSchoolPres.csproj", "{CD82ADAC-B5CE-4EDF-92AD-6325517CA893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhaserTypeScriptApp", "PhaserTypeScriptApp\PhaserTypeScriptApp\PhaserTypeScriptApp.csproj", "{3B25C6B0-C852-43FD-9A63-C03B12A3AA7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CD82ADAC-B5CE-4EDF-92AD-6325517CA893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD82ADAC-B5CE-4EDF-92AD-6325517CA893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD82ADAC-B5CE-4EDF-92AD-6325517CA893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B25C6B0-C852-43FD-9A63-C03B12A3AA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B25C6B0-C852-43FD-9A63-C03B12A3AA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B25C6B0-C852-43FD-9A63-C03B12A3AA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B25C6B0-C852-43FD-9A63-C03B12A3AA7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
