@@ -20,5 +20,12 @@ namespace ItSchoolPres.Controllers
 
             return View();
         }
+
+        public ActionResult QuizCustomizer()
+        {
+            ViewBag.Message = "Drag and drop test page.";
+
+            return View();
+        }
     }
 }

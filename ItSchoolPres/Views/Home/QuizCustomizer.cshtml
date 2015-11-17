@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <h1>Customisez le jeu "Quiz : Drag & Drop"</h1>
+    <form action="/">
+        <div id="quiz2">
+            <h2>Question n°2</h2>
+            <input type="text" placeholder="Notez la question ici" id="question2" required autofocus /><br /><br />
+            <input type="text" placeholder="Proposition de réponse..." id="answer1Question2" required />
+            <input type="text" placeholder="Bonne réponse..." id="answer2Question2" required />
+            <input type="text" placeholder="Proposition de réponse..." id="answer3Question2" required />
+            <input type="text" placeholder="Proposition de réponse..." id="answer4Question2" required />
+        </div>
+        <div id="quiz3">
+            <h2>Question n°3</h2>
+            <input type="text" placeholder="Notez la question ici" id="question3" required /><br /><br />
+            <input type="text" placeholder="Proposition de réponse..." id="answer1Question3" required />
+            <input type="text" placeholder="Bonne réponse..." id="answer2Question3" required />
+            <input type="text" placeholder="Proposition de réponse..." id="answer3Question3" required />
+            <input type="text" placeholder="Proposition de réponse..." id="answer4Question3" required />
+        </div>
+        <input type="submit" value="Sauvegardez votre contenu" onclick="AddContent()" />
+    </form>
+</center>
+
+@section Scripts {
+    <script src="~/Scripts/QuizCustomizer/QuizCustomizer.js"></script>
+}

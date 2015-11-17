@@ -15,6 +15,7 @@ var idDragList = [
 ];
 
 var questionImage = document.createElement("img");
+
 var quiz1 = [
     "Quel animal est-ce  : ",
     "un éléfant",
@@ -23,21 +24,25 @@ var quiz1 = [
     "un et les phans"
 ];
 
+/*
 var quiz2 = [
     "Combien font 3 x 3 ? [déplace le bon résultat]",
     "6",
     "12",
     "33",
     "9"
-];
+];*/
 
-var quiz3 = [
+/*var quiz3 = [
     "\"Maître cobeau sur un arbre [déplace le mot manquant]\"",
     "perché",
     "planté",
     "asséché",
     "alléché"
-];
+];*/
+
+var quiz2 = JSON.parse(localStorage.getItem('quiz2'));
+var quiz3 = JSON.parse(localStorage.getItem('quiz3'));
 
 var goodCount = 0;
 var previousCount = goodCount;
@@ -66,20 +71,24 @@ function changeIdOrder() {
         idDragList[1].id = "badanswer2";
         idDragList[2].id = "badanswer3";
         idDragList[3].id = "goodanswer";
-        question.textContent = quiz2[0];
-        for (var i = 0; i < idDragList.length; i++) {
-            idDragList[i].textContent = quiz2[i + 1];
-        }
+        question.textContent = quiz2.Question;
+
+        idDragList[3].textContent = quiz2.GoodAnswer;
+        idDragList[0].textContent = quiz2.BadAnswer2;
+        idDragList[1].textContent = quiz2.BadAnswer1;
+        idDragList[2].textContent = quiz2.BadAnswer3;
     }
     else if (goodCount == 2) {
         idDragList[0].id = "goodanswer";
         idDragList[1].id = "badanswer1";
         idDragList[3].id = "badanswer2";
         idDragList[2].id = "badanswer3";
-        question.textContent = quiz3[0];
-        for (var i = 0; i < idDragList.length; i++) {
-            idDragList[i].textContent = quiz3[i + 1];
-        }
+        question.textContent = quiz3.Question;
+
+        idDragList[3].textContent = quiz3.BadAnswer1;
+        idDragList[0].textContent = quiz3.GoodAnswer;
+        idDragList[1].textContent = quiz3.BadAnswer3;
+        idDragList[2].textContent = quiz3.BadAnswer2;
     }
     else if (goodCount = 3) {
         alert("Bravo tu a gagné !");
@@ -275,8 +284,6 @@ interact('.dropzone').dropzone({
             badAnswer2OriginalText = document.getElementById("badanswer2").textContent;
             badAnswer3OriginalText = document.getElementById("badanswer3").textContent;
         }
-        
-
 
         function getPosition(element) {
             var xPosition = 0;
