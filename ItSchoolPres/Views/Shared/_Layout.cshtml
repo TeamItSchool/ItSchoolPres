@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body background="~/Medias/Images/backgroundCliffHD.png">
+    <a href=@Url.Action("Index", "Home")><img src="~/Medias/Images/LOGO_360.png" style="width:200px"/></a>
+
+    <div class="container body-content">
+        @RenderBody()
+        <br />
+        <hr />
+        <footer>
+            <p>&copy; Since @DateTime.Now.Year - By It'School DevTeam</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
