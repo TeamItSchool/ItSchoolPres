@@ -23,13 +23,60 @@ textarea {
     max-width: 280px;
 }
 
-.draggable {
-  width: 140px;
+#outer-dropzone {
   height: 140px;
-  background: #F90;
-  border-radius: 10px;
 }
-.draggable.is-pointer-down {
-  background: #09F;
+
+#inner-dropzone {
+  height: 80px;
 }
-.draggable.is-dragging { opacity: 0.9; }
+
+.dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+
+  color: #fff;
+  border-radius: 0.75em;
+  background-color: #29e;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+.img {
+    height: auto; 
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px; 
+    max-height: 100px;
+}
