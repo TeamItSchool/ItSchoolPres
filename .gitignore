@@ -30,4 +30,3 @@ Runtime/Current/
 *.svn/
 /packages/
 *.nupkg
-*.Tests.VisualState.xml
